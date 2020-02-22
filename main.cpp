@@ -67,6 +67,10 @@ struct sniff_tcp {
 
 int main(int argc, char *argv[])
 {
+    if(argc<2){
+        printf("File name can not be empty!\n");
+        return 1;
+    }
     const char * file = argv[1];
     char errbuff[PCAP_ERRBUF_SIZE];
 
